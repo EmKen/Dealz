@@ -11,7 +11,7 @@
       <%= f.text_field :description, class: "form-control" %>
 
       <%= f.label :category %>
-      <%= f.select :category, ["Collectibles & Art", "Electronics", "Fashion", "Home & Garden", "Sports & Outdoors", "Toys"], {}, {class: "form-control"} %>
+      <%= f.select :category, Listing.distinct.pluck(:category) << "Miscellaneous", {}, {class: "form-control"} %>
 
       <%= f.label :price, "Price (in MYR)" %>
       <%= f.number_field :price, class: "form-control", step: 0.05, min: 1 %>

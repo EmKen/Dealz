@@ -1,0 +1,14 @@
+<% @listings.in_groups_of(3, false).each do |group| %>
+  <div class="row">
+  	<% group.each do |listing| %>
+      <div class="listing col-md-4">
+					<h3><%=link_to listing.product, listing_path(listing) %></h3>
+
+					<p> <%= listing.description %> </p>
+
+					<p>Price: <%= number_to_currency(listing.price, unit: "MYR", format: "%n %u") %></p>
+			</div>
+    <% end %>
+  </div>
+<% end %>
+<%= will_paginate @listings %>

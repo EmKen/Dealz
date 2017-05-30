@@ -39,6 +39,8 @@ gem "figaro"
 gem "omniauth-google-oauth2"
 # Faker for seeding
 gem "faker"
+# Will paginate for pagination
+gem "will_paginate"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

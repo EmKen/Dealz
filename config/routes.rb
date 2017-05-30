@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root "listings#index"
   resources :users
+  resources :listings
   get  '/signup',  to: 'users#new'
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'

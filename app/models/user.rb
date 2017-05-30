@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :listings
 	has_secure_password(validations: false)
 	before_save { self.email = email.downcase }
   validates :username, uniqueness: { case_sensitive: false, message: "has been taken"}

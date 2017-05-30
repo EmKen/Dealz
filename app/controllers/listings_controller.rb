@@ -1,7 +1,7 @@
 class ListingsController < ApplicationController
 
 	def index
-    @listings = Listing.search(params[:search])
+    @listings = Listing.search(params[:search]).paginate(per_page: 6, page: params[:page])
 	end
 
 	def new

@@ -6,7 +6,7 @@ class Listing < ApplicationRecord
 
 	def self.search(search)
 		if search
-			where(["product ILIKE ?", "%#{search}%"])
+			where("product ILIKE ?", "%#{search}%")
 		else
 			all
 		end

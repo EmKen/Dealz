@@ -1,0 +1,4 @@
+<div class="center jumbotron">
+  <h1> <%= @listing.product %> <%= number_to_currency(@listing.price, unit: "MYR", format: "%n %u") %> </h1>
+  <h2> <%= @listing.description %> </h2>
+</div>

@@ -37,6 +37,8 @@ gem 'bcrypt'
 gem "figaro"
 #Use OmniAuth for Google sign_in
 gem "omniauth-google-oauth2"
+# Faker for seeding
+gem "faker"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

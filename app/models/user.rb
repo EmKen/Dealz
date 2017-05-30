@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   has_many :listings
+  has_many  :sales, class_name: "Order", foreign_key: "merchant_id"
+  has_many  :purchases, class_name: "Order", foreign_key: "customer_id"
 	has_secure_password(validations: false)
 	before_save { self.email = email.downcase }
   validates :username, uniqueness: { case_sensitive: false, message: "has been taken"}

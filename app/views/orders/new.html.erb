@@ -1,0 +1,10 @@
+<div class="center jumbotron">
+	<h1> Confirm Order </h1>
+  <h2> Product: <%= @listing.product %>  </h2>
+  <h2> Price: <%= number_to_currency(@listing.price, unit: "MYR", format: "%n %u") %> </h2>
+  <%= form_for [@listing,@order] do |form| %>
+	  <div class="submit-field">
+	    <%= form.submit "Proceed to Payment" %>
+	  </div>
+<% end %>
+</div>

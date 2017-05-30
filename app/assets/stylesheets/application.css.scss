@@ -73,6 +73,29 @@ input {
   height: auto !important;
 }
 
+#search_form_div{
+  text_align: center;
+}
+
+#search_form {
+  display: inline-block;
+  width: 500px;
+  position: relative;
+}
+
+#search_input {
+  width: 100%;
+  padding-right: 100px;
+}
+
+#search_submit {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
 #errors {
   color: red;
   ul {

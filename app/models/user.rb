@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many  :purchases, class_name: "Order", foreign_key: "customer_id"
 	has_secure_password(validations: false)
 	before_save { self.email = email.downcase if self.email }
-  validates :username, uniqueness: { case_sensitive: false}
+  validates :username, uniqueness: { case_sensitive: false, allow_nil: true}
   validates :first_name, :last_name, :email, presence: { message: "is required" }
 
   with_options unless: :google_signin? do |form|

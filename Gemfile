@@ -47,6 +47,8 @@ gem "faker"
 gem "will_paginate"
 # 12 factor for deployment
 gem 'rails_12factor', group: :production
+# unicorn
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

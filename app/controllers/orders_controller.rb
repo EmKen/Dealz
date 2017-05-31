@@ -5,6 +5,7 @@ class OrdersController < ApplicationController
 		  @listing = Listing.find(params[:listing_id])
     else
       redirect_to login_path
+    end
 	end
 
   def create

@@ -1,7 +1,10 @@
 class OrdersController < ApplicationController
 	def new
-		@order = Order.new
-		@listing = Listing.find(params[:listing_id])
+    if logged_in?
+		  @order = Order.new
+		  @listing = Listing.find(params[:listing_id])
+    else
+      redirect_to login_path
 	end
 
   def create

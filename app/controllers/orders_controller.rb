@@ -14,4 +14,8 @@ class OrdersController < ApplicationController
       redirect_to new_order_braintree_path(@order)
     end
   end
+
+  def show
+    @order = Order.find(params[:id])
+  end
 end

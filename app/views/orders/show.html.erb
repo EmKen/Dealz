@@ -1,0 +1,31 @@
+<div class="center jumbotron">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Order Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th> Product </th>
+				<td> <%= @order.listing.product %> </td>
+			</tr>
+			<tr>
+				<th> Seller </th>
+				<td> <%= @order.merchant.username %> </td>
+			</tr>
+			<tr>
+				<th> Order Placed </th>
+				<td> <%= @order.created_at %> </td>
+			</tr>
+			<tr>
+				<th> Amount </th>
+				<td> <%= number_to_currency(@order.amount, unit: "MYR", format: "%n %u") %> </td>
+			</tr>
+			<tr>
+				<th> Status </th>
+				<td> <%= @order.status.titleize %> </td>
+			</tr>
+		</tbody>
+	</table>
+</div>

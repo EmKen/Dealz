@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :users
   resources :listings
   resources :listings do
-    resources :orders
+    resources :orders, only: [:new, :create]
   end
   resources :orders do
     resources :braintree, only: [:new]

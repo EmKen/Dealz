@@ -45,6 +45,8 @@ gem "omniauth-google-oauth2"
 gem "faker"
 # Will paginate for pagination
 gem "will_paginate"
+# 12 factor for deployment
+gem 'rails_12factor', group: :production
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
